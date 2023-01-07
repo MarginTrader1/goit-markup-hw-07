@@ -35,9 +35,9 @@ header {
     margin-right: auto;
     padding: 0 15px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 428px) {
     .container {
-        width: 480px;
+        width: 428px;
     }                
 }
 
@@ -145,6 +145,20 @@ header {
     
 }
 
+/* ++++++++++++++++++++ Делаем кнопки для мобильного меню ++++++++++++++++++++ */
+
+.mobile-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.mobile-button .close-button {
+    display: none;
+}
+
 .link {
     position: relative;
 
@@ -216,7 +230,7 @@ header {
 }
 
 .promotion-content {
-    padding: 112px 55px;
+    padding: 112px 54px;
     margin-left: auto;
     margin-right: auto;
 
@@ -224,7 +238,6 @@ header {
 }
 
 .promotion-title {
-    max-width: 318px;
     padding: 0;
     margin: 0;
     margin-left: auto;
@@ -232,8 +245,10 @@ header {
     margin-bottom: 48px;
 
     color: var(--main-background-color);
-    font-size: 56px;
-    line-height: 1.07;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
 }
 
 .promotion-button {
@@ -262,15 +277,14 @@ header {
 }
 
 .features-list {   
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
     padding: 0;
     margin: 0;
 }
 
 .features-list-item {
-    text-align: center;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -295,19 +309,34 @@ header {
     }
 }
 
-
 .features-icon {
     display: block;     
 }
 
 .features-title {
-    margin: 0;    
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
-    text-align: center;
+    margin: 0;
+    margin-left: auto;   
+    margin-right: auto; 
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.12;
+    letter-spacing: 0.02em;
 }
+
+
+@media screen and (min-width: 1158px) {
+    
+    .features-title {
+        margin: 0;    
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.04em;
+    }
+}
+
+
 
 .features-list > li:not(:first-child) {
    
