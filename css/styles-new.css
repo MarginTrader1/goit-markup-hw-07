@@ -36,9 +36,9 @@ header {
     margin-right: auto;
     padding: 0 15px;
 }
-@media screen and (min-width: 428px) {
+@media screen and (min-width: 480px) {
     .container {
-        width: 428px;
+        width: 480px;
     }                
 }
 
@@ -48,9 +48,9 @@ header {
     }                
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
     .container {
-        width: 1158px;
+        width: 1200px;
     }                
 }
 
@@ -132,24 +132,6 @@ header {
 }
 
 
-/* ============================== menu навигации ============================== */
-
-.menu {
-   padding: 24px 0;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-}
-
-.menu-list {
-    margin: 0;
-    padding: 0;
-}
-
-.menu-list > li:not(:first-child) {
-    
-}
-
 /* ++++++++++++++++++++ Делаем кнопки для мобильного меню ++++++++++++++++++++ */
 
 .mobile-button {
@@ -188,6 +170,7 @@ header {
     display: block;
 }
 
+
 /* ++++++++++++++++++++ Стили для меню ++++++++++++++++++++ */
 
 
@@ -198,7 +181,11 @@ header {
 
     color: var(--main-title-color);
     text-decoration: none; 
-    font-weight: 600;
+    
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
 
     transition: color 250ms var(--timing-animation) 0ms;
 }
@@ -207,41 +194,89 @@ header {
     color: var(--link-color);
 }
 
-.current::after {
-    content: "";
-    
-    position: absolute;
-    left: 0;
-    bottom: -27.5px;
+@media screen and (min-width: 768px) {
+    .current::after {
+        content: "";
+        
+        position: absolute;
+        left: 0;
+        bottom: -27.5px;
 
-    display: block;
-    background-color: var(--link-color);
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
+        display: block;
+        background-color: var(--link-color);
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+    }
 }
+
 
 .link:hover, 
 .link:focus {  
     color: var(--link-color);
 }
 
+/* ============================== menu навигации ============================== */
+
+.menu {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ 
+ .menu-list {
+     margin: 0;
+     padding: 0;
+     margin-bottom: 284px;
+
+     display: flex;
+     flex-direction: column;
+     gap: 40px;
+ }
+
 .menu-contacts {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;
+    margin-bottom: 48px;
 }
 
 .contacts-link {
     display: block;
 
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    
     color: var(--main-text-color);
     text-decoration: none;
 
     transition: color 250ms var(--timing-animation) 0ms;
 }
 
+.mobile-contacts-link {
+    color: var(--link-color);
+
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.11;
+}
+
 .contacts-link:hover, 
 .contacts-link:focus {
     color: var(--link-color);
+}
+
+.mobile-social-links {
+    display: flex;
+    margin: 0;
+    padding: 4px 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: spa;
+    
 }
 
 /* ============================== главная картинка styles ============================== */
@@ -335,7 +370,7 @@ header {
     background-color: #F4F4FD;
     border-radius: 5px;
 }
-@media screen and (max-width: 1158px) {
+@media screen and (max-width: 1200px) {
     .features-image {
         display: none;    
     }
@@ -357,7 +392,7 @@ header {
 }
 
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1200px) {
     
     .features-title {
         margin: 0;    
@@ -386,7 +421,7 @@ header {
     padding-bottom: 120px;
 }
 
-@media screen and (max-width: 1158px) {
+@media screen and (max-width: 1200px) {
     .products {
         display: none;    
     }
