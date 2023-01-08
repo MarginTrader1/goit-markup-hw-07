@@ -26,7 +26,8 @@ li {
 }
 
 header {
-    padding: 24px 0px;
+    position: relative;
+
     border-bottom: 1px solid rgb(212, 211, 211);
 }
 
@@ -134,11 +135,15 @@ header {
 /* ============================== menu навигации ============================== */
 
 .menu {
-   
+   padding: 24px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 
 .menu-list {
-    
+    margin: 0;
+    padding: 0;
 }
 
 .menu-list > li:not(:first-child) {
@@ -155,9 +160,36 @@ header {
     background-color: transparent;
 }
 
-.mobile-button .close-button {
+.mobile-button .mobile-close-button {
     display: none;
 }
+
+.mobile-button.is-open .mobile-close-button {
+    display: block;
+}
+
+.mobile-button.is-open .mobile-menu-button {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background-color: var(--main-background-color);
+    padding: 80px 40px 40px 40px;
+}
+
+.mobile-menu.is-open {
+    display: block;
+}
+
+/* ++++++++++++++++++++ Стили для меню ++++++++++++++++++++ */
+
 
 .link {
     position: relative;
