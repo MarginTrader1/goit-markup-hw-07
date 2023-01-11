@@ -8,8 +8,10 @@
     --main-background-color: #FFFFFF;
 
     --timing-animation: cubic-bezier(0.4, 0, 0.2, 1);
-    --mobile: calc(100% / 2 - 7.5px)
-    }
+    --mobile: calc(100% / 2 - 7.5px);
+    --tablet: calc(100% / 2 - 12px);
+    --tablet-customers: calc(100% / 3 - 16px);
+}
  
 /* ============================== body styles ============================== */
 
@@ -358,6 +360,23 @@ header {
     gap: 8px;
 }
 
+@media screen and (min-width: 768px) {
+
+    .features-list-item {
+        width: var(--tablet);
+    }
+
+    .features-list {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        row-gap: 72px;
+        column-gap: 24px;
+    }
+}
+
 .features-image {
     width: 264px;
     height: 112px;
@@ -401,8 +420,6 @@ header {
         letter-spacing: 0.04em;
     }
 }
-
-
 
 .features-list > li:not(:first-child) {
    
@@ -500,6 +517,21 @@ header {
     border-radius: 0px 0px 4px 4px;
 }
 
+@media screen and (min-width: 768px) {
+
+    .team-list {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        row-gap: 64px;
+        column-gap: 24px;
+
+        justify-content: center;
+    }
+}
+
 .team-card p {
     margin: 0;
     margin-bottom: 8px;
@@ -569,6 +601,19 @@ header {
     width: var(--mobile);
 }
 
+@media screen and (min-width: 768px) {
+
+    .customers-list > li {
+        width: 168px;
+    }
+
+    .customers-list {   
+        justify-content: center;
+        
+        column-gap: 24px;
+    }
+}
+
 .customers-image {
     display: flex;
     justify-content: center;
@@ -617,6 +662,20 @@ header {
     gap: 72px;
 }
 
+@media screen and (min-width: 768px) {
+
+    .invitation > .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        row-gap: 72px;
+        column-gap: 24px;
+    }
+}
+
+
 .footer-logo > .logo {
     display: flex;
     justify-content: center;
@@ -655,10 +714,27 @@ header {
     gap: 16px;
 }
 
-.footer-subscribe,.subscribe-form, .subscribe-form > label {
-    width: 100%; 
+@media screen and (min-width: 768px) {
+
+    .subscribe-form {
+        flex-direction: row;
+    }
+
+    .footer-subscribe, .footer-social-list-links {
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
 }
 
+@media screen and (max-width: 767px) {
+
+    .footer-subscribe,.subscribe-form, .subscribe-form > label {
+        width: 100%; 
+    }
+}
 
 .footer-title {
     margin: 0;
