@@ -210,7 +210,6 @@ header {
     }
 }
 
-
 .link:hover, 
 .link:focus {  
     color: var(--link-color);
