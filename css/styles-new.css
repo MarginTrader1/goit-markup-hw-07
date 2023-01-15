@@ -112,10 +112,6 @@ header {
 
 /* ============================== logo styles ============================== */
 
-.logo-flex {
-    
-}
-
 .logo {
     color: var(--main-title-color);
     
@@ -144,6 +140,13 @@ header {
     background-color: transparent;
 }
 
+@media screen and (min-width: 768px) {
+    .mobile-button {
+        display: none;
+    }
+}
+
+
 .mobile-button .mobile-close-button {
     display: none;
 }
@@ -157,40 +160,60 @@ header {
 }
 
 .mobile-menu {
-    display: none;
-
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-
-    background-color: var(--main-background-color);
-    padding: 80px 40px 40px 40px;
+    padding: 0;
+    align-items: flex-start;
+    gap: 120px;
 }
 
 .mobile-menu.is-open {
     display: block;
 }
 
+@media screen and (max-width: 767px) {
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        padding: 80px 40px 40px 40px;
+
+        background-color: var(--main-background-color);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-menu {
+        display: flex;
+    }
+}
+
 
 /* ++++++++++++++++++++ Стили для меню ++++++++++++++++++++ */
-
 
 .link {
     position: relative;
 
-    padding: 0 4px;
-
     color: var(--main-title-color);
-    text-decoration: none; 
-    
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
+    text-decoration: none;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
 
     transition: color 250ms var(--timing-animation) 0ms;
 }
+
+@media screen and (max-width: 767px) {
+    .link {        
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+    }
+}
+
 
 .current {
     color: var(--link-color);
@@ -212,7 +235,6 @@ header {
     }
 }
 
-
 .link:hover, 
 .link:focus {  
     color: var(--link-color);
@@ -221,48 +243,77 @@ header {
 /* ============================== menu навигации ============================== */
 
 .menu {
-    padding: 24px 0;
+    padding: 24px 0 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
- }
+    gap: 120px;
+
+    align-items: flex-start;
+    
+}
  
- .menu-list {
+.menu-list {
      margin: 0;
      padding: 0;
-     margin-bottom: 284px;
 
      display: flex;
-     flex-direction: column;
      gap: 40px;
- }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .menu {
+        justify-content: space-between;
+    }
+    
+    .menu-list {
+        margin-bottom: 284px;
+
+        flex-direction: column;
+        gap: 40px;    
+    }
+
+    .menu-contacts {
+        gap: 40px;
+    }
+}
 
 .menu-contacts {
     display: flex;
-    flex-direction: column-reverse;
-    gap: 40px;
-    margin-bottom: 48px;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.contacts-link {
-    display: block;
+.contacts-link,
+.mobile-contacts-link {
 
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    
     color: var(--main-text-color);
     text-decoration: none;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
 
     transition: color 250ms var(--timing-animation) 0ms;
 }
 
-.mobile-contacts-link {
-    color: var(--link-color);
+@media screen and (max-width: 767px) {
+    .contacts-link {
+        display: block;
 
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 1.11;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        
+        text-decoration: none;
+    }
+
+    .mobile-contacts-link {
+        color: var(--link-color);
+
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 1.11;
+    }
 }
 
 .contacts-link:hover, 
@@ -278,7 +329,12 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: spa;
-    
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-social-links {
+        display: none;
+    }
 }
 
 /* ============================== главная картинка styles ============================== */
@@ -673,6 +729,9 @@ header {
 
         row-gap: 72px;
         column-gap: 24px;
+        justify-content: flex-start;
+
+        padding: 0 108px;
     }
 }
 
@@ -680,7 +739,14 @@ header {
 .footer-logo > .logo {
     display: flex;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-logo > .logo {
+        justify-content: flex-start;
+        
+    }
 }
 
 .footer-logo > p {
@@ -719,15 +785,14 @@ header {
 
     .subscribe-form {
         flex-direction: row;
+        gap: 24px;
     }
 
     .footer-subscribe, .footer-social-list-links {
         display: flex;
         flex-direction: column;
-
         align-items: flex-start;
     }
-
 }
 
 @media screen and (max-width: 767px) {
@@ -782,6 +847,13 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-input-form {
+        width: 264px;
+    }
+
 }
 
 .footer-subscribe-button   {
