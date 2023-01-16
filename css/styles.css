@@ -184,7 +184,7 @@ header {
 
 /* ============================== главная картинка styles ============================== */
 
-.promotion {
+.hero {
     display: block;
     max-width: 1600px;
     height: 600px; 
@@ -199,13 +199,14 @@ header {
     background-position: center;
 }
 
-.promotion-content {
+
+.hero-content {
     min-height: 603px;
     padding: 192px 0;
     text-align: center;
 }
 
-.promotion-title {
+.hero-title {
     width: 492px;
     padding: 0;
     margin: 0;
@@ -218,20 +219,20 @@ header {
     line-height: 1.07;
 }
 
-.promotion-button {
+.hero-button {
     min-width: 170px;
     padding: 16px 32px;
 }
 
-.button.promotion-button:hover,
-.button.promotion-button:focus {
+.button.hero-button:hover,
+.button.hero-button:focus {
     box-shadow: 0px 1px 6px 
     rgba(46, 47, 66, 0.08), 
     0px 1px 1px rgba(46, 47, 66, 0.16), 
     0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.button.promotion-button:active {
+.button.hero-button:active {
     background-color: #404BBF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
