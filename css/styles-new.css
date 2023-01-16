@@ -130,74 +130,106 @@ header {
     color: var(--link-color);
 }
 
-
 /* ++++++++++++++++++++ Делаем кнопки для мобильного меню ++++++++++++++++++++ */
 
-.mobile-button {
-    display: inline-flex;
+.menu-toggle {
+    min-height: 32px;
+    min-width: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
     margin: 0;
     padding: 0;
-    border: none;
     background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
 }
 
 @media screen and (min-width: 768px) {
-    .mobile-button {
+    .menu-toggle {
         display: none;
     }
 }
 
+.mobile-close-button {
+    position: absolute;
+    top: 40px;
+    right: 40px;
 
-.mobile-button .mobile-close-button {
-    display: none;
-}
-
-.mobile-button.is-open .mobile-close-button {
-    display: block;
-}
-
-.mobile-button.is-open .mobile-menu-button {
-    display: none;
-}
-
-.mobile-menu {
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
     padding: 0;
-    align-items: flex-start;
-    gap: 120px;
+
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: black;
+
+    cursor: pointer;
+
+    transition: box-shadow 250ms var(--timing-animation) 0ms,
+                background-color 250ms var(--timing-animation) 0ms,
+                color 250ms var(--timing-animation) 0ms;
 }
 
-.mobile-menu.is-open {
-    display: block;
+.mobile-close-button:hover,
+.mobile-close-button:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    background-color: var(--link-color);
+    color: var(--main-background-color);
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-close-button {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 767px) {
-    .mobile-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
+    .menu-container {
+        position: fixed;
+        top: 0;
         left: 0;
-        width: 100%;
 
-        padding: 80px 40px 40px 40px;
+        width: 100vw;
+        height: 100vh;
+
+        padding: 80px 40px 40px;
 
         background-color: var(--main-background-color);
+        z-index: 999;
+    
+        transform: translateX(100%);
+        transition: transform 250ms ease-in-out;
+    }
+
+    .menu-container.is-open {
+        transform: translateX(0);
     }
 }
 
 @media screen and (min-width: 768px) {
-    .mobile-menu {
+    .menu-container {
         display: flex;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .mobile-menu {
+    .menu-container {
         gap: 332px;
         align-items: center;
     }
 }
-
 
 /* ++++++++++++++++++++ Стили для меню ++++++++++++++++++++ */
 
@@ -275,6 +307,38 @@ header {
      gap: 40px;
 }
 
+@media screen and (min-width: 768px) {
+    .menu-list {
+        margin-right: 118px;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+    .menu-list {
+        margin-right: 0;
+   }
+}
+
+.menu-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contacts-link,
+.mobile-contacts-link {
+
+    color: var(--main-text-color);
+    text-decoration: none;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+
+    transition: color 250ms var(--timing-animation) 0ms;
+}
+
 @media screen and (max-width: 767px) {
     
     .menu {
@@ -290,44 +354,10 @@ header {
 
     .menu-contacts {
         gap: 40px;
+        flex-direction: column-reverse;
+
+        margin-bottom: 48px;
     }
-}
-
-
-.menu-contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-@media screen and (min-width: 1200px) {
-    .menu-contacts {
-        flex-direction: row;
-        gap: 40px;
-    }
-
-    .contacts-link,
-    .mobile-contacts-link {
-
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.05em;
-    }
-}
-
-.contacts-link,
-.mobile-contacts-link {
-
-    color: var(--main-text-color);
-    text-decoration: none;
-
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.04em;
-
-    transition: color 250ms var(--timing-animation) 0ms;
 }
 
 @media screen and (max-width: 767px) {
@@ -350,19 +380,36 @@ header {
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .menu-contacts {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .contacts-link,
+    .mobile-contacts-link {
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+    }
+}
+
 .contacts-link:hover, 
 .contacts-link:focus {
     color: var(--link-color);
 }
 
 .mobile-social-links {
-    display: flex;
-    margin: 0;
-    padding: 4px 0;
+    display: flex;   
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    gap: spa;
+    gap: 56px;
+
+    margin: 0;
+    padding: 0;
 }
 
 @media screen and (min-width: 768px) {
