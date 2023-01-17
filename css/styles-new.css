@@ -986,7 +986,7 @@ header {
 }
 
 .footer-logo > p {
-    width: 264px;
+    max-width: 264px;
     margin: 0;
     margin-top: 16px;
     line-height: 1.5;
