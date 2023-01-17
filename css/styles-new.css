@@ -523,17 +523,17 @@ header {
         }
 }
 
-.hero-content {
-    padding: 112px 0px;
-    margin-left: auto;
-    margin-right: auto;
-
+.hero > .container {
+    padding-top: 112px;
+    padding-bottom: 112px;
+    
     text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
-    .hero-content {
-        padding: 188px 0px;
+    .hero > .container {
+        padding-top: 188px;
+        padding-bottom: 188px;
     }
 }
 
