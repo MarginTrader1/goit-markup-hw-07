@@ -439,7 +439,6 @@ header {
         background-position: center;
     }
 
-
     @media (min-device-pixel-ratio: 2),
         (-webkit-min-device-pixel-ratio: 2),
         (-o-min-device-pixel-ratio: 2/1),
@@ -470,7 +469,6 @@ header {
         background-size: cover;
         background-position: center;
     }
-
 
     @media (min-device-pixel-ratio: 2),
         (-webkit-min-device-pixel-ratio: 2),
@@ -504,7 +502,6 @@ header {
         background-size: cover;
         background-position: center;
     }
-
 
     @media (min-device-pixel-ratio: 2),
         (-webkit-min-device-pixel-ratio: 2),
@@ -885,7 +882,6 @@ header {
 
     .customers-list {   
         justify-content: center;
-        
         column-gap: 24px;
     }
 }
