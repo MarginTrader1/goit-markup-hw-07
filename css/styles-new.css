@@ -203,7 +203,7 @@ header {
 
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         
 
         width: 100vw;
@@ -358,6 +358,7 @@ header {
     }
 
     .menu-contacts {
+        margin-top: 284px;
         gap: 40px;
         flex-direction: column-reverse;
     }
@@ -415,6 +416,7 @@ header {
 
     margin: 0;
     padding: 0;
+    margin-top: 48px;
 }
 
 @media screen and (min-width: 768px) {
