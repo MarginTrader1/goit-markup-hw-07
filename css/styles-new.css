@@ -1526,3 +1526,59 @@ header {
 .checkbox-title {
     margin: 0;
 } 
+
+/* Делаем закрывающий "крест" в модальном окне  */
+
+/* .menu-close-button {
+    position: relative;
+
+    left: 100%;
+    
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-close-button-icon {
+    position: absolute;
+    top: 50%;
+    
+    display: block;
+    width: 24px; 
+    height: 3px; 
+    background-color: none;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu-close-button-icon::after {
+    content: "";
+    display: block;
+    position: absolute;
+    
+    width: 24px; 
+    height: 3px; 
+    background-color: rgb(255, 0, 0);
+    transform: rotate(45deg);
+    margin: 0;
+    padding: 0;
+}
+
+.menu-close-button-icon::before {
+    content: "";
+
+    position: absolute;
+    
+    display: block;
+    width: 24px; 
+    height: 3px; 
+    background-color: rgb(255, 0, 0);
+    transform: rotate(-45deg);
+    margin: 0;
+    padding: 0;
+}
+ */
