@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"/>
     
     <!-- мої стилі -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles-new.css">
 
     <!-- шрифт -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,21 +20,86 @@
 <body>
 
     <header>
-        <div class="container logo-flex">
-            <a href="./index.html" class="logo">
-                <span class="logo-name">Web</span>Studio
-            </a>
+        <div class="container">
             <nav class="menu">
-                <ul class="menu-list">
-                    <li><a href="./index.html" class="link">Studio</a></li>
-                    <li><a href="./porfolio.html" class="link current">Portfolio</a></li>
-                    <li><a href="#" class="link">Contacts</a></li>
-                </ul>
+
+                <a href="./index.html" class="logo">
+                     <span class="logo-name">Web</span>Studio
+                </a>
+            
+                <button type="button" 
+                    class="menu-toggle js-open-menu" 
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                    >
+
+                    <svg class="" 
+                        width="32" 
+                        height="22" 
+                        aria-label="переключатель мобильного меню"
+                    >
+                        <use class="" href="./images/symbol-defs.svg#icon-burger-button"></use>
+                    </svg>
+
+                </button>
+                
+                <div class="menu-container js-menu-container" id="mobile-menu">
+
+                    <button class="mobile-close-button js-close-menu">
+                        <svg class="mobile-close-button-icon" width="8" height="8">
+                            <use href="./images/symbol-defs.svg#icon-close-button"></use>
+                        </svg>
+                    </button>
+                
+                    <ul class="menu-list">
+                        <li><a href="./index.html" class="link">Studio</a></li>
+                        <li><a href="./porfolio.html" class="link current">Portfolio</a></li>
+                        <li><a href="#" class="link">Contacts</a></li>
+                    </ul>
+
+                    <div class="menu-contacts">
+                        <ul class="mobile-social-links">
+                            <li>
+                                <a href="#" class="team-card-link social-link">
+                                    <svg class="team-card-icon" width="16" height="16">
+                                        <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="team-card-link social-link">
+                                    <svg class="team-card-icon" width="16" height="16">
+                                        <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="team-card-link social-link">
+                                    <svg class="team-card-icon" width="16" height="16">
+                                        <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="team-card-link social-link">
+                                    <svg class="team-card-icon" width="16" height="16">
+                                        <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="mailto:info@devstudio.com" class="contacts-link">info@devstudio.com</a>
+                        <a href="tel:+110001111111" class="contacts-link mobile-contacts-link">+11 (000) 111-11-11</a>
+                    </div>
+
+                    <!-- <span class="menu-close-button">
+                        <span class="menu-close-button-icon">
+                        </span>
+                    </span> -->
+                </div>
+
             </nav>
-            <div class="menu-contacts">
-                <a href="mailto:info@devstudio.com" class="contacts-link">info@devstudio.com</a>
-                <a href="tel:+110001111111" class="contacts-link">+11 (000) 111-11-11</a>  
-            </div>
+            
         </div>
     </header>
 
@@ -43,16 +108,15 @@
 
         <section>
            <div class="container">
-            <nav class="portfolio-nav">
-                <ul class="portfolio-list">
-                    <li class="portfolio-list-item"><button type="button" class="porfolio-button">All</button></li>
-                    <li class="portfolio-list-item"><button type="button" class="porfolio-button">Web Site</button></li>
-                    <li class="portfolio-list-item"><button type="button" class="porfolio-button">App</button></li>
-                    <li class="portfolio-list-item"><button type="button" class="porfolio-button">Design</button></li>
-                    <li class="portfolio-list-item"><button type="button" class="porfolio-button">Marketing</button></li>
-                </ul>
-            </nav>
-
+                <nav class="portfolio-nav">
+                    <ul class="portfolio-list">
+                        <li class="portfolio-list-item"><button type="button" class="porfolio-button">All</button></li>
+                        <li class="portfolio-list-item"><button type="button" class="porfolio-button">Web Site</button></li>
+                        <li class="portfolio-list-item"><button type="button" class="porfolio-button">App</button></li>
+                        <li class="portfolio-list-item"><button type="button" class="porfolio-button">Design</button></li>
+                        <li class="portfolio-list-item"><button type="button" class="porfolio-button">Marketing</button></li>
+                    </ul>
+                </nav>
            </div>
             
            <div class="container">
@@ -266,6 +330,14 @@
             
         </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     
 </body>
 </html>

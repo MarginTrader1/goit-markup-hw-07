@@ -1096,7 +1096,6 @@ img {
     .footer-input-form {
         width: 264px;
     }
-
 }
 
 .footer-subscribe-button   {
@@ -1118,31 +1117,52 @@ img {
 /* ============================== porfolio styles ============================== */
 
 .portfolio {
-    padding-top: 93px;
-    padding-bottom: 120px;   
+        padding-top: 48px;
+        padding-bottom: 48px;   
+    }
+
+@media screen and (min-width: 768px) {
+    .portfolio {
+        padding-top: 64px;
+        padding-bottom: 96px;   
+    }
 }
 
-.portfolio-title {
-
+@media screen and (min-width: 1200px) {
+    .portfolio {
+        padding-top: 93px;
+        padding-bottom: 120px;   
+    }
 }
 
 .portfolio-nav  {
-    margin-left: 320px;
-    margin-bottom: 75px;
+    margin-left: 0;
+    margin-bottom: 48px;
+}
+
+@media screen and (min-width: 768px) {
+    .portfolio-nav  {
+        margin-bottom: 64px;
+    }
 }
 
 .portfolio-list {
     display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
     padding: 0;
     margin: 0;
 }
 
-.portfolio-list > li:not(:first-child) {
-    margin-left: 24px;
+@media screen and (min-width: 768px) {
+    .portfolio-list  {
+        justify-content: center;
+    }
 }
 
 .porfolio-button {
-    padding: 12px 24px;
+    padding: 8px 16px;
     border: 0 solid transparent;
     border-radius: 4px;
     
@@ -1164,6 +1184,12 @@ img {
                 box-shadow 250ms var(--timing-animation) 0ms;
 }
 
+@media screen and (min-width: 768px) {
+    .porfolio-button {
+        padding: 12px 24px;
+    }
+}
+
 .porfolio-button:hover,
 .porfolio-button:focus {
     background-color: var(--link-color);
@@ -1180,8 +1206,23 @@ img {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px; 
+    row-gap: 48px;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .works-list {
+        row-gap: 72px;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .works-list {
+        row-gap: 48px;
+        column-gap: 24px;
+        justify-content: center;
+    }
 }
 
 .work-card {
@@ -1260,9 +1301,6 @@ img {
     letter-spacing: 0.02em;
 }
 
-.work-card img {
-    display: block;
-}
 
 /* ============================== модальное окно ============================== */
 
@@ -1526,6 +1564,33 @@ img {
 .checkbox-title {
     margin: 0;
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Делаем закрывающий "крест" в модальном окне  */
 
